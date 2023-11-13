@@ -17,7 +17,7 @@ repo_name: quick-spiritum
 edit_uri: blob/main/clinical-safety-management-file
 
 # `mkdocs serve` serves the docs locally on this port
-dev_addr: "127.0.0.1:8001"
+dev_addr: "0.0.0.0:7500"
 
 # Navigation structure
 nav:
@@ -70,6 +70,7 @@ theme:
   font:
     code: Roboto Mono
 
+
 # mkdocs plugins
 plugins:
   - git-committers:
@@ -79,7 +80,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - search
-  - with-pdf:
+  ##- with-pdf:
       #cover: false
       #back_cover: true
       #cover_subtitle: SUBTITLE TEXT
@@ -106,8 +107,9 @@ plugins:
       #render_js: true
       #headless_chrome_path: headless-chromium
       #
-      output_path: pdf/quick-spiritum-clinical-safety-management-file.pdf
-      enabled_if_env: ENABLE_PDF_EXPORT
+
+      ##output_path: pdf/quick-spiritum-clinical-safety-management-file.pdf
+      ##enabled_if_env: ENABLE_PDF_EXPORT
       #
       #debug_html: true
       #show_anchors: true
@@ -120,7 +122,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      #emoji_index: !!python/name:materialx.emoji.twemoji
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys

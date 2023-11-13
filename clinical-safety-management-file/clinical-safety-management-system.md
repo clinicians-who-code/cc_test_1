@@ -1,13 +1,13 @@
 ---
 title: Clinical Risk Management System
-author: { { cookiecutter.author_name } }
+author: Mark Bailey
 ---
 
 # Clinical Risk Management System
 
 ## CWC
 
-### DATE
+### DATE 13/11/2023
 
 ## Document Management
 
