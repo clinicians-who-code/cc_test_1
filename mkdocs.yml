@@ -1,0 +1,145 @@
+# Key metadata about the site
+site_name: Quick Spiritum
+site_description: Hi all, this is a test
+site_author: CWC
+site_url:
+
+# MkDocs processes files in this folder into a HTML site
+docs_dir: clinical-safety-management-file
+
+# Copyright information which is shown in the footer
+copyright: Copyright &copy; 2022 CWC
+
+# these lines configure the 'GitHub repo' widget on the top right
+# uncomment to enable
+repo_url: https://github.com/clinicians-who-code/cc_test_1
+repo_name: quick-spiritum
+edit_uri: blob/main/clinical-safety-management-file
+
+# `mkdocs serve` serves the docs locally on this port
+dev_addr: "127.0.0.1:8001"
+
+# Navigation structure
+nav:
+  - Home: "index.md"
+  - "clinical-safety-management-system.md"
+  - "clinical-safety-management-plan.md"
+  - "clinical-safety-case-report.md"
+  - "hazard-log.md"
+  - "business-continuity.md"
+  - "security.md"
+  - "third-party-tools-safety-assmt.md"
+  - "medical-device.md"
+  - "download.md"
+  - "contact.md"
+  - "license.md"
+
+# theme settings, fonts, colours
+theme:
+  name: material
+
+  # replace these path or the contents of the files to change the logo and favicon
+  logo: _assets/_images/logo.png
+  favicon: _assets/_images/favicon.png
+
+  features:
+    - navigation.instant
+    # uncomment the below two lines for Tabbed navigation (along the header bar)
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.top
+    - navigation.expand
+    # - toc.integrate
+
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    code: Roboto Mono
+
+# mkdocs plugins
+plugins:
+  - git-committers:
+      repository: https://github.com/clinicians-who-code/cc_test_1
+      branch: main
+      enabled: !ENV [ENABLE_GIT_COMMITTERS, false] # makes Git Committers optional
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - search
+  - with-pdf:
+      #cover: false
+      #back_cover: true
+      #cover_subtitle: SUBTITLE TEXT
+      #custom_template_path: TEMPLATES PATH
+      #
+      #toc_title: TOC TITLE TEXT
+      #heading_shift: false
+      #toc_level: 3
+      #ordered_chapter_level: 2
+      #excludes_children:
+      #    - 'release-notes/:upgrading'
+      #    - 'release-notes/:changelog'
+      #
+      #exclude_pages:
+      #    - 'bugs/'
+      #    - 'appendix/contribute/'
+      #convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      #two_columns_level: 3
+      #
+      #render_js: true
+      #headless_chrome_path: headless-chromium
+      #
+      output_path: pdf/quick-spiritum-clinical-safety-management-file.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      #debug_html: true
+      #show_anchors: true
+      #verbose: true
+
+# additional markdown features
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+# set extra CSS file
+extra_css:
+  - _assets/_stylesheets/extra.css
+
+extra:
+  project_slug: quick-spiritum
+
+  # uncomment to add social icons
+  # social:
+  #   - icon: fontawesome/brands/twitter
+  #     link: https://twitter.com/exampleorgstwitter
+  #   - icon: fontawesome/brands/github
+  #     link: https://github.com/exampleorgsgithub
